@@ -61,22 +61,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-14 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <SectionHeading eyebrow="Leadership" title="Led by an engineer" />
-          <Reveal className="mt-10 flex flex-col items-center gap-5 rounded-2xl border border-slate-200 p-8 text-center sm:flex-row sm:text-left">
-            <span className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-brand-600 text-2xl font-bold text-white" aria-hidden>
-              {site.ceo.name.split(' ').map((w) => w[0]).join('').slice(0, 2)}
-            </span>
-            <div>
-              <h3 className="text-xl font-bold">{site.ceo.name}</h3>
-              <p className="text-sm font-medium text-brand-600">{site.ceo.role} · {site.ceo.title}</p>
-              <p className="mt-2 text-sm text-slate-600">softDestiny is run by a working software engineer, so every project gets hands-on technical leadership, clear communication and clean engineering from day one.</p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       <section className="bg-slate-50 py-14 sm:py-20">
         <div className="mx-auto max-w-6xl 2xl:max-w-7xl px-4 sm:px-6">
           <SectionHeading eyebrow="How we work" title="A simple, transparent process" />

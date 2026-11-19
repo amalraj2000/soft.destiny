@@ -7,7 +7,6 @@ export const site = {
   email: 'amalrajvelliyenchery1@gmail.com',
   phone: '+91 95444 37950',
   whatsapp: '919544437950', // digits only, with country code
-  ceo: { name: 'Amal Raj V', role: 'Founder & CEO', title: 'Software Engineer' },
   hours: [
     { days: 'Monday – Friday', time: '9:30 AM – 6:30 PM IST' },
     { days: 'Saturday', time: '10:00 AM – 2:00 PM IST' },
