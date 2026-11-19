@@ -15,11 +15,47 @@
   }
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html, body { overflow-x: clip; }
 body { @apply bg-white text-slate-700 antialiased; }
-h1, h2, h3 { @apply text-slate-900 tracking-tight; }
+@layer base {
+  h1, h2, h3 { @apply text-slate-900 tracking-tight; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
 }
+
+/* ---- Scroll reveal ---- */
+.reveal {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translate3d(0, 32px, 0) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease;
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+.reveal[data-dir="left"] { transform: translate3d(-24px, 0, 0); }
+.reveal[data-dir="right"] { transform: translate3d(24px, 0, 0); }
+@media (min-width: 1024px) {
+  .reveal[data-dir="left"] { transform: translate3d(-40px, 0, 0); }
+  .reveal[data-dir="right"] { transform: translate3d(40px, 0, 0); }
+}
+.reveal[data-dir="zoom"] { transform: scale(0.9); }
+.reveal.in { opacity: 1; filter: none; transform: none; will-change: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; filter: none !important; transform: none !important; }
+}
+
+/* ---- Gradient text shimmer ---- */
+.text-shimmer {
+  background: linear-gradient(90deg, var(--color-brand-600), #8b5cf6, #06b6d4, var(--color-brand-600));
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer { to { background-position: 250% 0; } }

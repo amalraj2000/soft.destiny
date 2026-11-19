@@ -6,7 +6,7 @@ import { site, navLinks } from '../data/site.js'
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl 2xl:max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-14 lg:grid-cols-3">
         <div>
           <Logo light />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
@@ -23,7 +23,7 @@ export default function Footer() {
         <div>
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">Contact</h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-2"><Mail size={16} className="text-brand-500" /><a href={`mailto:${site.email}`} className="hover:text-white">{site.email}</a></li>
+            <li className="flex items-center gap-2"><Mail size={16} className="shrink-0 text-brand-500" /><a href={`mailto:${site.email}`} className="break-all hover:text-white">{site.email}</a></li>
             <li className="flex items-center gap-2"><Phone size={16} className="text-brand-500" /><a href={`tel:${site.phone.replace(/\s/g, '')}`} className="hover:text-white">{site.phone}</a></li>
             <li className="flex items-center gap-2"><MapPin size={16} className="text-brand-500" />{site.location}</li>
           </ul>

@@ -3,7 +3,7 @@ import { CheckCircle2, Send } from 'lucide-react'
 import { projectTypes } from '../data/content.js'
 
 const empty = { name: '', company: '', contact: '', type: 'Business website', message: '' }
-const field = 'mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20'
+const field = 'mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3.5 py-3 text-base sm:text-sm text-slate-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20'
 
 export default function ContactForm() {
   const [data, setData] = useState(empty)
@@ -50,7 +50,7 @@ export default function ContactForm() {
   const aria = (k) => ({ 'aria-invalid': !!errors[k], 'aria-describedby': errors[k] ? `${k}-err` : undefined })
 
   return (
-    <form onSubmit={submit} noValidate className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+    <form onSubmit={submit} noValidate className="space-y-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block text-sm font-medium text-slate-800">Name *
           <input className={field} value={data.name} onChange={set('name')} autoComplete="name" {...aria('name')} />{err('name')}
@@ -64,7 +64,7 @@ export default function ContactForm() {
       </label>
       <fieldset>
         <legend className="text-sm font-medium text-slate-800">What do you need?</legend>
-        <div className="mt-2 grid gap-2 sm:grid-cols-2">
+        <div className="mt-2 grid grid-cols-2 gap-2">
           {projectTypes.map((o) => (
             <label key={o} className={`cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-medium transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand-500 ${data.type === o ? 'border-brand-600 bg-brand-50 text-brand-700' : 'border-slate-300 hover:border-slate-400'}`}>
               <input type="radio" name="type" value={o} checked={data.type === o} onChange={set('type')} className="sr-only" />{o}
