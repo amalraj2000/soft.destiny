@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, MessageCircle, Clock } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import Reveal from '../components/Reveal.jsx'
 import ContactForm from '../components/ContactForm.jsx'
@@ -7,9 +7,6 @@ import { site } from '../data/site.js'
 export default function Contact() {
   const rows = [
     { icon: MapPin, label: 'Location', value: site.location },
-    { icon: Mail, label: 'Email', value: site.email, href: `mailto:${site.email}` },
-    { icon: Phone, label: 'Phone', value: site.phone, href: `tel:${site.phone.replace(/\s/g, '')}` },
-    { icon: MessageCircle, label: 'WhatsApp', value: site.phone, href: `https://wa.me/${site.whatsapp}` },
   ]
   return (
     <>

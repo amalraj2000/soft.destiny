@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MapPin, Mail, Phone } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 import Logo from './Logo.jsx'
 import { site, navLinks } from '../data/site.js'
 
@@ -23,8 +23,6 @@ export default function Footer() {
         <div>
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">Contact</h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-2"><Mail size={16} className="shrink-0 text-brand-500" /><a href={`mailto:${site.email}`} className="break-all hover:text-white">{site.email}</a></li>
-            <li className="flex items-center gap-2"><Phone size={16} className="text-brand-500" /><a href={`tel:${site.phone.replace(/\s/g, '')}`} className="hover:text-white">{site.phone}</a></li>
             <li className="flex items-center gap-2"><MapPin size={16} className="text-brand-500" />{site.location}</li>
           </ul>
         </div>
