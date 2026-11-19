@@ -1,6 +1,6 @@
 // Central company info — edit here and it updates the whole site.
 export const site = {
-  name: 'Softdestiny',
+  name: 'softDestiny',
   tagline: 'Affordable websites, deployed fast',
   location: 'Kozhikode, Kerala, India',
   // Contact details (hours are still placeholders).

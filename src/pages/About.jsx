@@ -10,14 +10,14 @@ import { site } from '../data/site.js'
 export default function About() {
   return (
     <>
-      <PageHeader eyebrow="About Softdestiny" title="Engineering practical web solutions from Kerala"
+      <PageHeader eyebrow="About softDestiny" title="Engineering practical web solutions from Kerala"
         text="We are a software and web development company in Kerala helping local businesses and global clients turn ideas into reliable digital products." />
 
       <section className="py-16">
         <div className="mx-auto grid max-w-6xl 2xl:max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-2">
           <Reveal dir="left">
             <h2 className="text-3xl font-bold">Our story</h2>
-            <p className="mt-4 text-slate-600">Softdestiny started with a simple observation: businesses in Kerala, big and small, deserved the same quality of web engineering as companies anywhere in the world — without the complexity or inflated cost.</p>
+            <p className="mt-4 text-slate-600">softDestiny started with a simple observation: businesses in Kerala, big and small, deserved the same quality of web engineering as companies anywhere in the world — without the complexity or inflated cost.</p>
             <p className="mt-4 text-slate-600">Today we work with business owners who want an affordable website, an online store or a custom web app. The approach is always the same: understand the business, build it cleanly, deploy it fast.</p>
           </Reveal>
           <Reveal dir="right" className="rounded-2xl bg-brand-50 p-8">
@@ -71,7 +71,7 @@ export default function About() {
             <div>
               <h3 className="text-xl font-bold">{site.ceo.name}</h3>
               <p className="text-sm font-medium text-brand-600">{site.ceo.role} · {site.ceo.title}</p>
-              <p className="mt-2 text-sm text-slate-600">Softdestiny is run by a working software engineer, so every project gets hands-on technical leadership, clear communication and clean engineering from day one.</p>
+              <p className="mt-2 text-sm text-slate-600">softDestiny is run by a working software engineer, so every project gets hands-on technical leadership, clear communication and clean engineering from day one.</p>
             </div>
           </Reveal>
         </div>

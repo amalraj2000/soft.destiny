@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <Logo light />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            Softdestiny builds affordable, fast-to-deploy websites and web applications that help your business run and grow — from Kerala to the world.
+            softDestiny builds affordable, fast-to-deploy websites and web applications that help your business run and grow — from Kerala to the world.
           </p>
           <p className="mt-3 flex items-center gap-2 text-sm"><MapPin size={16} className="text-brand-500" /> Proudly based in {site.location}</p>
         </div>
