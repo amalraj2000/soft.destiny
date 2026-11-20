@@ -5,7 +5,9 @@
       "Bash(sed -i '' 's#          <Logo light />#          <Logo light />\\\\n          <p className=\"mt-2 text-sm font-medium text-sky-300\">{site.tagline}</p>#' src/components/Footer.jsx)",
       "Bash(sed -i '' 's#<title>softDestiny | .*</title>#<title>softDestiny | Innovative Software Solutions</title>#' index.html)",
       "Bash(sed -i '' \"s/from-emerald-400 to-teal-600/from-slate-50 to-sky-100/\" src/data/works.js)",
-      "Bash(sed -i '' '37s/text-emerald-500/text-sky-500/' src/components/WorkModal.jsx)"
+      "Bash(sed -i '' '37s/text-emerald-500/text-sky-500/' src/components/WorkModal.jsx)",
+      "Bash(sips -c 360 1100 --cropOffset 190 150 public/works/entecart-kerala.jpg)",
+      "Bash(sips -Z 900 public/works/entecart-kerala.jpg)"
     ]
   }
 }

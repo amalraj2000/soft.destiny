@@ -8,7 +8,8 @@ export const works = [
     summary: "Kerala's friendly online store — handpicked products delivered to the customer's doorstep.",
     tech: ['Next.js', 'React', 'Vercel'],
     image: '/works/entecart-kerala.jpg',
-    gradient: 'from-slate-50 to-sky-100',
+    imageShape: 'wide',
+    gradient: 'from-white to-slate-50',
     highlights: [
       'Product catalogue with a clean, mobile-friendly storefront',
       'Shopping cart and wishlist',
