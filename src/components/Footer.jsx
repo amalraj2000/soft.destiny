@@ -9,6 +9,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl 2xl:max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-14 lg:grid-cols-3">
         <div>
           <Logo light />
+          <p className="mt-2 text-sm font-medium text-sky-300">{site.tagline}</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
             softDestiny builds affordable, fast-to-deploy websites and web applications that help your business run and grow — from Kerala to the world.
           </p>

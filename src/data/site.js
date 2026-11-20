@@ -1,7 +1,7 @@
 // Central company info — edit here and it updates the whole site.
 export const site = {
   name: 'softDestiny',
-  tagline: 'Affordable websites, deployed fast',
+  tagline: 'Innovative Software Solutions',
   location: 'Kozhikode, Kerala, India',
   hours: [
     { days: 'Monday – Friday', time: '9:30 AM – 6:30 PM IST' },

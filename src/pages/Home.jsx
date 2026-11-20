@@ -36,8 +36,8 @@ export default function Home() {
             <Button to="/contact" className="w-full sm:w-auto">Contact Us <ArrowRight size={16} /></Button>
             <Button to="/works" variant="secondary" className="w-full sm:w-auto">View Our Works</Button>
           </div>
-          <dl style={{ animationDelay: '480ms' }} className="mx-auto mt-10 animate-fade-up sm:mt-14 grid max-w-xl grid-cols-3 gap-4 text-center">
-            {[['Affordable', 'Fair pricing'], ['Fast', 'Quick deployment'], ['Local', 'Kerala-based team']].map(([a, b]) => (
+          <dl style={{ animationDelay: '480ms' }} className="mx-auto mt-10 animate-fade-up sm:mt-14 grid max-w-md grid-cols-2 gap-4 text-center">
+            {[['Affordable', 'Fair pricing'], ['Fast', 'Quick deployment']].map(([a, b]) => (
               <div key={a}><dt className="text-xl font-bold text-slate-900 sm:text-2xl">{a}</dt><dd className="text-xs text-slate-500">{b}</dd></div>
             ))}
           </dl>

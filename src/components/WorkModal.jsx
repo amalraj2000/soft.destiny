@@ -20,7 +20,9 @@ export default function WorkModal({ work, onClose }) {
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="work-title">
       <div className="absolute inset-0 animate-fade-up bg-slate-900/60" onClick={onClose} />
       <div className="relative max-h-[92dvh] w-full max-w-2xl animate-fade-up overflow-y-auto rounded-t-2xl bg-white shadow-2xl sm:rounded-2xl">
-        <div className={`h-32 bg-gradient-to-br ${work.gradient}`} />
+        <div className={`flex h-40 items-center justify-center bg-gradient-to-br ${work.gradient}`}>
+          {work.image && <img src={work.image} alt={`${work.title} logo`} className={`h-32 w-32 ${work.imageShape === 'square' ? 'rounded-2xl' : 'rounded-full'} shadow-md`} />}
+        </div>
         <button ref={closeRef} onClick={onClose} aria-label="Close" className="absolute right-3 top-3 rounded-full bg-white/90 p-2 text-slate-800 hover:bg-white"><X size={18} /></button>
         <div className="p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">{work.type}</p>
@@ -32,7 +34,7 @@ export default function WorkModal({ work, onClose }) {
 
           <h3 className="mt-6 text-sm font-bold uppercase tracking-wider text-slate-900">Highlights</h3>
           <ul className="mt-2 space-y-2">
-            {work.highlights.map((h) => <li key={h} className="flex gap-2 text-sm"><Check size={18} className="mt-0.5 shrink-0 text-emerald-500" />{h}</li>)}
+            {work.highlights.map((h) => <li key={h} className="flex gap-2 text-sm"><Check size={18} className="mt-0.5 shrink-0 text-sky-500" />{h}</li>)}
           </ul>
 
           <h3 className="mt-6 text-sm font-bold uppercase tracking-wider text-slate-900">Outcome</h3>
