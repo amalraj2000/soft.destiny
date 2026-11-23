@@ -93,3 +93,11 @@ body { @apply bg-white text-slate-700 antialiased; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: clip; }
+.dark .bg-red-50 { background-color: rgb(220 38 38 / 0.12); }
+.dark .border-red-200 { border-color: rgb(220 38 38 / 0.35); }
+.dark .text-red-700 { color: #fca5a5; }
+.dark .bg-emerald-100 { background-color: rgb(16 185 129 / 0.2); }
+.dark .text-emerald-800 { color: #6ee7b7; }
+.dark .bg-amber-100 { background-color: rgb(245 158 11 / 0.2); }
+.dark .text-amber-800 { color: #fcd34d; }
+.dark .bg-slate-200 { background-color: #334155; }

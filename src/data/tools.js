@@ -2,6 +2,8 @@
 export const tools = [
   { id: 'cost', title: 'Website cost calculator', text: 'Get a rough price range for your website or web app.' },
   { id: 'words', title: 'Word & character counter', text: 'Count words, characters, sentences and reading time.' },
+  { id: 'mockup', title: 'Website mockup preview', text: 'See a sample homepage for your kind of business, with your name and colours.' },
+  { id: 'names', title: 'Business & domain name ideas', text: 'Get name ideas and see which .com / .in domains look available.' },
   { id: 'password', title: 'Password generator', text: 'Create strong, random passwords in one click.' },
 ]
 

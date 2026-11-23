@@ -3,9 +3,11 @@ import PageHeader from '../components/PageHeader.jsx'
 import CostCalculator from '../components/tools/CostCalculator.jsx'
 import WordCounter from '../components/tools/WordCounter.jsx'
 import PasswordGenerator from '../components/tools/PasswordGenerator.jsx'
+import MockupPreview from '../components/tools/MockupPreview.jsx'
+import NameGenerator from '../components/tools/NameGenerator.jsx'
 import { tools } from '../data/tools.js'
 
-const panels = { cost: CostCalculator, words: WordCounter, password: PasswordGenerator }
+const panels = { cost: CostCalculator, words: WordCounter, password: PasswordGenerator, mockup: MockupPreview, names: NameGenerator }
 
 export default function Tools() {
   const [active, setActive] = useState('cost')
