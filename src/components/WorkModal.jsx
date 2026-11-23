@@ -19,8 +19,8 @@ export default function WorkModal({ work, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="work-title">
       <div className="absolute inset-0 animate-fade-up bg-slate-900/60" onClick={onClose} />
-      <div className="relative max-h-[92dvh] w-full max-w-2xl animate-fade-up overflow-y-auto rounded-t-2xl bg-white shadow-2xl sm:rounded-2xl">
-        <div className={`flex h-40 items-center justify-center bg-gradient-to-br ${work.gradient}`}>
+      <div data-lenis-prevent className="relative max-h-[92dvh] w-full max-w-2xl animate-fade-up overflow-y-auto rounded-t-2xl bg-white shadow-2xl sm:rounded-2xl">
+        <div className={`work-media flex h-40 items-center justify-center bg-gradient-to-br ${work.gradient}`}>
           {work.image && <img src={work.image} alt={`${work.title} logo`} className={work.imageShape === 'wide' ? 'max-h-32 w-auto max-w-[85%] object-contain' : `h-32 w-32 ${work.imageShape === 'square' ? 'rounded-2xl' : 'rounded-full'} shadow-md`} />}
         </div>
         <button ref={closeRef} onClick={onClose} aria-label="Close" className="absolute right-3 top-3 rounded-full bg-white/90 p-2 text-slate-800 hover:bg-white"><X size={18} /></button>

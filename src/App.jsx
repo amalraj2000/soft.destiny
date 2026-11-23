@@ -6,6 +6,7 @@ import Layout from './components/Layout.jsx'
 const Home = lazy(() => import('./pages/Home.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Works = lazy(() => import('./pages/Works.jsx'))
+const Tools = lazy(() => import('./pages/Tools.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="works" element={<Works />} />
+          <Route path="tools" element={<Tools />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

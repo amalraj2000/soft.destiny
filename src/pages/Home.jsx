@@ -1,5 +1,6 @@
 import { ArrowRight, MapPin } from 'lucide-react'
 import Button from '../components/Button.jsx'
+import Stats from '../components/Stats.jsx'
 import Services from '../components/Services.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import WorkCard from '../components/WorkCard.jsx'
@@ -44,6 +45,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Stats />
       <Services />
 
       <section className="py-14 sm:py-20">

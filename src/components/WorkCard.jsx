@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 export default function WorkCard({ work, onOpen }) {
   return (
     <button onClick={() => onOpen(work)} className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
-      <div className={`relative flex h-48 items-center justify-center bg-gradient-to-br ${work.gradient} p-5`}>
+      <div className={`work-media relative flex h-48 items-center justify-center bg-gradient-to-br ${work.gradient} p-5`}>
         {work.image
           ? <img src={work.image} alt={`${work.title} logo`} className={work.imageShape === 'wide' ? 'max-h-full w-auto max-w-full object-contain' : `h-full w-auto ${work.imageShape === 'square' ? 'rounded-2xl' : 'rounded-full'} shadow-md`} loading="lazy" />
           : <span className="text-2xl font-extrabold text-white drop-shadow">{work.title}</span>}

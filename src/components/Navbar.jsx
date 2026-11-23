@@ -4,6 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo.jsx'
 import Button from './Button.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 import { navLinks } from '../data/site.js'
 
 const linkCls = ({ isActive }) =>
@@ -36,10 +37,13 @@ export default function Navbar() {
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
           {navLinks.map((l) => <NavLink key={l.to} to={l.to} end={l.to === '/'} className={linkCls}>{l.label}</NavLink>)}
         </nav>
-        <div className="hidden md:block"><Button to="/contact">Contact Us</Button></div>
-        <button className="rounded-md p-2 text-slate-700 md:hidden" onClick={() => setOpen(true)} aria-label="Open menu" aria-expanded={open}>
-          <Menu size={24} />
-        </button>
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <div className="hidden md:block"><Button to="/contact">Contact Us</Button></div>
+          <button className="rounded-md p-2 text-slate-700 md:hidden" onClick={() => setOpen(true)} aria-label="Open menu" aria-expanded={open}>
+            <Menu size={24} />
+          </button>
+        </div>
       </div>
 
     </header>
@@ -48,7 +52,7 @@ export default function Navbar() {
       {/* Mobile drawer */}
       <div className={`fixed inset-0 z-[80] transition-[visibility] duration-300 md:hidden ${open ? 'visible' : 'invisible pointer-events-none'}`} aria-hidden={!open}>
         <div onClick={() => setOpen(false)} className={`absolute inset-0 bg-slate-900/50 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`} />
-        <aside className={`absolute right-0 top-0 flex h-dvh w-72 max-w-[85%] flex-col overflow-y-auto bg-white p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-xl transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+        <aside data-lenis-prevent className={`absolute right-0 top-0 flex h-dvh w-72 max-w-[85%] flex-col overflow-y-auto bg-white p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-xl transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="mb-6 flex items-center justify-between">
             <Logo />
             <button className="rounded-md p-2" onClick={() => setOpen(false)} aria-label="Close menu" tabIndex={open ? 0 : -1}><X size={22} /></button>
