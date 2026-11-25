@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react'
-import { X, Check, ExternalLink } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { X, Check, ExternalLink, Smartphone, Monitor } from 'lucide-react'
 import Button from './Button.jsx'
 
 export default function WorkModal({ work, onClose }) {
   const closeRef = useRef(null)
+  const [view, setView] = useState('mobile')
 
   useEffect(() => {
     if (!work) return
@@ -16,6 +17,7 @@ export default function WorkModal({ work, onClose }) {
   }, [work, onClose])
 
   if (!work) return null
+  const shots = work.screens?.[view] ?? []
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="work-title">
       <div className="absolute inset-0 animate-fade-up bg-slate-900/60" onClick={onClose} />
@@ -28,6 +30,27 @@ export default function WorkModal({ work, onClose }) {
           <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">{work.type}</p>
           <h2 id="work-title" className="mt-1 text-2xl font-bold">{work.title}</h2>
           <p className="mt-3 text-slate-600">{work.summary}</p>
+
+          {work.screens && (
+            <>
+              <div className="mt-6 flex items-center justify-between">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">Screens</h3>
+                <div className="inline-flex rounded-lg bg-slate-100 p-1 text-xs font-medium" role="tablist">
+                  {[['mobile', Smartphone, 'Mobile'], ['desktop', Monitor, 'Desktop']].map(([k, Ico, label]) => (
+                    <button key={k} role="tab" aria-selected={view === k} onClick={() => setView(k)} className={`flex items-center gap-1 rounded-md px-3 py-1 ${view === k ? 'bg-white shadow-sm' : 'text-slate-500'}`}><Ico size={14} />{label}</button>
+                  ))}
+                </div>
+              </div>
+              <div data-lenis-prevent className={`mt-3 flex gap-3 overflow-x-auto pb-2 ${view === 'desktop' ? 'snap-x snap-mandatory' : ''}`}>
+                {shots.map((s) => (
+                  <figure key={s.src} className={`shrink-0 snap-center ${view === 'mobile' ? 'w-40' : 'w-[85%]'}`}>
+                    <img src={s.src} alt={`${work.title} ${view} – ${s.caption}`} loading="lazy" className="w-full rounded-lg border border-slate-200 shadow-sm" />
+                    <figcaption className="mt-1 text-center text-xs text-slate-500">{s.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </>
+          )}
 
           <h3 className="mt-6 text-sm font-bold uppercase tracking-wider text-slate-900">The challenge</h3>
           <p className="mt-1 text-slate-600">{work.challenge}</p>

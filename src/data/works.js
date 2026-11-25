@@ -9,6 +9,18 @@ export const works = [
     tech: ['Next.js', 'React', 'Vercel'],
     image: '/works/entecart-kerala.jpg',
     imageShape: 'wide',
+    screens: {
+      mobile: [
+        { src: '/works/entecart/m-home.jpg', caption: 'Storefront home' },
+        { src: '/works/entecart/m-product.jpg', caption: 'Product page' },
+        { src: '/works/entecart/m-admin.jpg', caption: 'Admin dashboard' },
+      ],
+      desktop: [
+        { src: '/works/entecart/d-home.jpg', caption: 'Storefront home' },
+        { src: '/works/entecart/d-product.jpg', caption: 'Product page' },
+        { src: '/works/entecart/d-admin.jpg', caption: 'Admin dashboard' },
+      ],
+    },
     gradient: 'from-white to-slate-50',
     highlights: [
       'Product catalogue with a clean, mobile-friendly storefront',
@@ -28,6 +40,10 @@ export const works = [
     tech: ['React', 'Web App', 'Vercel'],
     image: '/works/localconvert.svg',
     imageShape: 'square',
+    screens: {
+      mobile: [{ src: '/works/localconvert/m-home.jpg', caption: 'Home' }],
+      desktop: [{ src: '/works/localconvert/d-home.jpg', caption: 'Home' }],
+    },
     gradient: 'from-slate-50 to-sky-100',
     highlights: [
       'Convert files between many formats',
@@ -37,5 +53,35 @@ export const works = [
     ],
     challenge: 'Give people one simple place to convert files and shrink them, without installing software.',
     outcome: 'A live file conversion and compression tool, built and deployed quickly.',
+  },
+  {
+    id: 'rent-management-system',
+    title: 'Rent Management System',
+    type: 'Property & rent management web app',
+    url: 'https://rentmanagementsystem.vercel.app/',
+    summary: 'Run a PG or rental property in one place — tenants, rooms and beds, rent, expenses and announcements.',
+    tech: ['React', 'Web App', 'Vercel'],
+    image: '/works/rent/logo.png',
+    imageShape: 'square',
+    gradient: 'from-teal-50 to-emerald-100',
+    screens: {
+      mobile: [
+        { src: '/works/rent/m-home.jpg', caption: 'Landing page' },
+        { src: '/works/rent/m-tenants.jpg', caption: 'Tenants' },
+      ],
+      desktop: [
+        { src: '/works/rent/d-home.jpg', caption: 'Landing page' },
+        { src: '/works/rent/d-tenants.jpg', caption: 'Tenants' },
+      ],
+    },
+    highlights: [
+      'Tenant records with bed, rent and joining details',
+      'Rooms and beds overview with live occupancy',
+      'Rent and expense tracking',
+      'Announcements and notifications for residents',
+      'Responsive on mobile and desktop, deployed on Vercel',
+    ],
+    challenge: 'Give PG and rental owners a simple way to manage tenants, rooms and rent without spreadsheets.',
+    outcome: 'A live rent management system, built and deployed quickly, ready for day-to-day use.',
   },
 ]
